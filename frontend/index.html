@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SoftLance AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><div class="logo">S</div><div><h1>SoftLance AI</h1><span>AI Assistant</span></div></div>
+    <button class="new-chat" id="newChatBtn">＋ New Chat</button>
+    <div class="history">
+      <div class="section-title"><span>Recent Chats</span><button id="clearHistoryBtn">🗑</button></div>
+      <div id="chatHistory" class="chat-history"></div>
+    </div>
+    <div class="sidebar-bottom">
+      <button class="side-btn" id="settingsBtn">⚙ Settings</button>
+      <div class="profile"><div class="avatar small">Z</div><div><strong>Zia</strong><span>Personal workspace</span></div></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="mobile-menu" id="menuBtn">☰</button>
+      <div><strong id="chatTitle">New Chat</strong><span>Ask anything or upload a PDF</span></div>
+      <button class="icon-btn" id="topNewChatBtn">＋</button>
+    </header>
+
+    <section class="messages" id="messages">
+      <div class="welcome" id="welcome">
+        <div class="welcome-logo">S</div>
+        <h2>How can I help you?</h2>
+        <p>Ask a question, summarize a document, or upload a PDF.</p>
+        <div class="quick-actions">
+          <button data-prompt="Explain Django in simple words">Explain Django</button>
+          <button data-prompt="Give me a short summary of this topic">Summarize</button>
+          <button data-prompt="Help me learn Python">Learn Python</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="composer-area">
+      <div class="file-preview" id="filePreview"></div>
+      <form class="composer" id="chatForm">
+        <label class="attach-btn" title="Upload PDF">📎<input type="file" id="pdfInput" accept=".pdf,application/pdf" hidden></label>
+        <textarea id="messageInput" rows="1" placeholder="Ask anything..."></textarea>
+        <button class="send-btn" id="sendBtn" type="submit">➤</button>
+      </form>
+      <div class="composer-footer"><span>SoftLance AI can make mistakes. Check important information.</span><span id="statusText"></span></div>
+    </div>
+  </main>
+</div>
+
+<div class="modal hidden" id="settingsModal">
+  <div class="modal-card">
+    <div class="modal-header"><h2>Settings</h2><button id="closeSettings">×</button></div>
+    <label class="setting-row"><span><strong>Dark mode</strong><small>Use a darker interface</small></span><input type="checkbox" id="darkMode"></label>
+    <button class="danger-btn" id="deleteAllBtn">Delete all chat history</button>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
