@@ -1,103 +1,146 @@
-# SoftLance AI
+# 🤖 SoftLance AI
 
-AI-powered chatbot and PDF assistant built with Django REST Framework and Hugging Face.
+> AI-powered chatbot and PDF assistant built with Django REST Framework, JavaScript, and Hugging Face.
 
-SoftLance AI is a full-stack AI application that allows users to chat with an AI assistant, manage conversations, and provides a foundation for PDF summarization and document-based Q&A.
+🌐 **Live Application:**  
+https://softlance-ai-pdf-chatbot.onrender.com/
 
----
+🔗 **GitHub Repository:**  
+https://github.com/ZiaSaafir/softlance-ai-pdf-chatbot
 
-## Table of Contents
-
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Architecture](#architecture)
-- [API Endpoints](#api-endpoints)
-- [Installation](#installation)
-- [Security](#security)
-- [Roadmap](#roadmap)
-- [Goal](#goal)
-- [Author](#author)
+🚀 **Backend API:**  
+https://softlance-ai.onrender.com/
 
 ---
 
-## Features
+## 📌 About
 
-- AI-powered chatbot
-- Hugging Face LLM integration
-- Conversation history
+**SoftLance AI** is a full-stack AI chatbot application developed by **SoftLance Tech**.
+
+The application allows users to communicate with an AI assistant through a clean web interface while storing conversations in a Django backend.
+
+The project is also designed as a foundation for an AI-powered **PDF assistant**, allowing users to upload documents, summarize them, and ask questions about their content.
+
+This project was built as a practical full-stack AI application using Django REST Framework, JavaScript, and Hugging Face Inference Providers.
+
+---
+
+## ✨ Features
+
+### 💬 AI Chat
+
+- Ask questions in natural language
+- Receive AI-generated responses
+- Clean chat interface
+- User and AI message bubbles
+- Loading states
+- Error handling
+- Responsive interface
+
+### 🗂️ Conversation History
+
+- Automatically save conversations
+- View previous conversations
 - Create new chats
-- Modern responsive UI
-- Django REST API
-- PDF upload and summarization foundation
-- OpenAI-compatible AI API
-- Environment-based API configuration
+- Load previous conversations
+- Delete conversation history
+
+### 🧠 AI Integration
+
+- Hugging Face Inference Providers
+- OpenAI-compatible API
+- Modern open-source AI models
+- Dedicated AI service layer
+- Secure API key configuration using environment variables
+
+### 🎨 Frontend
+
+- Modern SoftLance AI interface
+- Responsive layout
+- Sidebar navigation
+- Recent conversations
+- New Chat button
+- Chat message interface
+- Settings section
+- SoftLance branding
+
+### 📄 PDF Assistant
+
+The project is structured to support:
+
+- PDF upload
+- PDF text extraction
+- PDF summarization
+- Questions about PDF documents
+- Context-aware document conversations
+
+> PDF functionality is part of the ongoing development roadmap.
 
 ---
 
-## Tech Stack
+# 🛠️ Tech Stack
 
-### Backend
+## Backend
 
-| Technology | Purpose |
-|------------|---------|
-| Python | Core programming language |
-| Django | Web framework |
-| Django REST Framework | API development |
+- Python
+- Django 6
+- Django REST Framework
+- Gunicorn
+- SQLite for development
+- PostgreSQL-ready architecture
 
-### Frontend
+## AI
 
-| Technology | Purpose |
-|------------|---------|
-| HTML5 | Structure |
-| CSS3 | Styling |
-| JavaScript | Interactivity |
-| Fetch API | HTTP requests |
-<img width="1344" height="647" alt="image" src="https://github.com/user-attachments/assets/905f81fd-94df-472c-a873-1bd0432499c5" />
+- Hugging Face Inference Providers
+- OpenAI-compatible API
+- Large Language Models (LLMs)
 
+## Frontend
 
-![alt text](image.png)
+- HTML5
+- CSS3
+- JavaScript
+- Fetch API
 
-### AI
+## Deployment
 
-| Technology | Purpose |
-|------------|---------|
-| Hugging Face Inference Providers | AI model access |
-| Open-source LLMs | Natural language processing |
-
-### Database
-
-| Technology | Purpose |
-|------------|---------|
-| SQLite | Development database |
-| PostgreSQL | Production-ready |
+- GitHub
+- Render
+- Gunicorn
+- Render Environment Variables
 
 ---
 
-## Architecture
-Frontend
-|
-v
-JavaScript Fetch API
-|
-v
-Django REST API
-|
-v
-AI Service
-|
-v
-Hugging Face
-|
-v
-AI Response
-|
-v
-Frontend
+# 🏗️ Architecture
 
-text
-
----
-
+```text
+                    ┌──────────────────────┐
+                    │       Frontend       │
+                    │    HTML + CSS + JS   │
+                    └──────────┬───────────┘
+                               │
+                               │ HTTP / JSON
+                               ▼
+                    ┌──────────────────────┐
+                    │    Django REST API   │
+                    │                      │
+                    │     /api/chat/       │
+                    │ /api/conversations/  │
+                    └──────────┬───────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │      AI Service      │
+                    │    ai_service.py     │
+                    └──────────┬───────────┘
+                               │
+                               │ API Request
+                               ▼
+                    ┌──────────────────────┐
+                    │      Hugging Face    │
+                    │  Inference Provider  │
+                    └──────────────────────┘
+                    
 ## API Endpoints
 
 ### Chat Endpoint
