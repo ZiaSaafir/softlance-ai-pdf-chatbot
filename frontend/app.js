@@ -4,7 +4,8 @@
 ========================================================= */
 
 // Change this if your Django endpoint is different.
-const API_URL = "http://127.0.0.1:8000/api/chat/";
+// const API_URL = "http://127.0.0.1:8000/api/chat/";
+const API_URL = "https://softlance-ai.onrender.com/api/chat/";
 
 
 /* =========================================================
@@ -1167,3 +1168,6 @@ function initialize() {
 ========================================================= */
 
 initialize();
+
+// const CONVERSATIONS_URL =
+//     "https://softlance-ai.onrender.com/api/conversations/";
