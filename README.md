@@ -55,6 +55,8 @@ SoftLance AI is a full-stack AI application that allows users to chat with an AI
 <img width="1344" height="647" alt="image" src="https://github.com/user-attachments/assets/905f81fd-94df-472c-a873-1bd0432499c5" />
 
 
+![alt text](image.png)
+
 ### AI
 
 | Technology | Purpose |
